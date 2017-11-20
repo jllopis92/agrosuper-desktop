@@ -1,21 +1,84 @@
-<ion-split-pane>
-  <ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<div>
+  <img src="assets/images/agrosuper_wallpaper.jpg" alt="">
+</div>-->
 
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
+<div class="container" *ngIf="!showVideo">
 
-  </ion-menu>
+  <div id="main" class="contentDiv">
+    <div (click)="selectedVideo(1)">
+     <!-- Featured-->
+    </div>
 
-  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main></ion-nav>
-</ion-split-pane>
+    <div (click)="selectedVideo(2)">
+      <!--Featured 2-->
+    </div>
+
+    <div (click)="selectedVideo(3)">
+      <!--Featured 3-->
+    </div>
+  </div>
+
+  <div id="main2" class="contentDiv">
+    <div (click)="selectedVideo(4)">
+      <!--Featured 4-->
+    </div>
+
+    <div (click)="selectedVideo(5)">
+      <!--Featured 5-->
+    </div>
+
+    <div (click)="selectedVideo(6)">
+      <!--Featured 6-->
+    </div>
+  </div>
+
+  <div id="main3" class="contentDiv">
+    <div (click)="selectedVideo(7)">
+      <!--Featured 7-->
+    </div>
+
+    <div (click)="selectedVideo(8)">
+      <!--Featured 8-->
+    </div>
+
+    <div (click)="selectedVideo(9)">
+      <!--Featured 9-->
+    </div>
+  </div>
+
+  <div id="main4" class="contentDiv">
+    <div (click)="selectedVideo(10)">
+      <!--Featured 10-->
+    </div>
+
+    <div (click)="selectedVideo(11)">
+     <!-- Featured 11-->
+    </div>
+
+    <div (click)="selectedVideo(12)">
+     <!-- Featured 12-->
+    </div>
+  </div>
+
+  <!--<img src="assets/images/agrosuper_wallpaper.jpg">-->
+
+  <video id="video-background" preload="auto" playsinline autoplay muted loop>
+    <source src="/assets/videos/small.mp4" type="video/mp4" poster="assets/images/agrosuper_wallpaper.jpg"/>
+    Browser not supported
+  </video>
+</div>
+
+<!--<div class="container" *ngIf="showVideo">
+  <video preload="auto" (click)="hiddeAndStop()">
+    <source src="assets/videos/big_buck_bunny_720p_stereo.avi" type="video/mp4" />
+  </video>
+</div>-->
+
+<div class="video" *ngIf="showVideo">
+  <video autoplay id="video-selected" (click)="hiddeAndStop()" preload="auto">
+    <source src="{{videoUrl}}" type="video/mp4" />
+    Browser not supported
+  </video>
+</div>
+
