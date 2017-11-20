@@ -12,7 +12,6 @@ Thumbs.db
 /src/plugins
 /src/www/build/
 /src/.tmp/
-/output
 /test-darwin-x64
 /A Polyonic App-darwin-x64
 /build-sample
