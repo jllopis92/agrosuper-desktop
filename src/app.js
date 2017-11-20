@@ -54,6 +54,9 @@
       height: 900
     });
 
+    mainWindow.setFullScreen(true);
+
+
     expressApp.use(skipMap());
     expressApp.use(express.static(path.join(__dirname, 'www')));
     expressApp.use(express.static(path.join(__dirname, 'node_modules')));

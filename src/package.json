@@ -1,8 +1,8 @@
 {
-  "name": "com.ionicframework.app723569",
-  "author": "Ionic Framework",
+  "name": "Agrosuper-Desktop",
+  "author": "Exponecial Digital",
   "homepage": "http://ionicframework.com/",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -36,7 +36,7 @@
   },
   "osx": {
     "build": "1",
-    "identifier": "com.polyonic",
+    "identifier": "com.exdi.agrosuper",
     "LSApplicationCategoryType": "public.app-category.productivity",
     "//codeSignIdentitiy": {
       "dmg": "Developer ID Application: Company Name (APPIDENTITY)",
@@ -60,6 +60,6 @@
       "locator": "ios"
     }
   ],
-  "description": "Polyonic: An Ionic project",
+  "description": "Aplicacion de escritorio para agrosuper",
   "main": "app.js"
 }
